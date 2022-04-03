@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace movi_escritorio.Presentacion
+namespace movi_escritorio.Presentacion.Personal
 {
-    public partial class Clientes : Form
+    public partial class NuevoEditarPersonal : Form
     {
-        public Clientes()
+        public NuevoEditarPersonal()
         {
             InitializeComponent();
         }

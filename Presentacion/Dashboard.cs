@@ -57,5 +57,10 @@ namespace movi_escritorio.Presentacion
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
+
+        private void Dashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

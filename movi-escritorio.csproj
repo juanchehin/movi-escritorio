@@ -97,23 +97,41 @@
     <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Logica\CL_Clientes.cs" />
     <Compile Include="Logica\CL_Usuarios.cs" />
-    <Compile Include="Presentacion\Asistencias.cs">
+    <Compile Include="Presentacion\Asistencias\Asistencias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Asistencias.Designer.cs">
+    <Compile Include="Presentacion\Asistencias\Asistencias.Designer.cs">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Caja.cs">
+    <Compile Include="Presentacion\Asistencias\NuevaAsistencia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Caja.Designer.cs">
+    <Compile Include="Presentacion\Asistencias\NuevaAsistencia.Designer.cs">
+      <DependentUpon>NuevaAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Caja\Caja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Caja\Caja.Designer.cs">
       <DependentUpon>Caja.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Clientes.cs">
+    <Compile Include="Presentacion\Caja\NuevoEditarMovimiento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Clientes.Designer.cs">
+    <Compile Include="Presentacion\Caja\NuevoEditarMovimiento.Designer.cs">
+      <DependentUpon>NuevoEditarMovimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\Clientes.Designer.cs">
       <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\NuevoEditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\NuevoEditarCliente.Designer.cs">
+      <DependentUpon>NuevoEditarCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Dashboard.cs">
       <SubType>Form</SubType>
@@ -133,27 +151,39 @@
     <Compile Include="Presentacion\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Personal.cs">
+    <Compile Include="Presentacion\Personal\NuevoEditarPersonal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Personal.Designer.cs">
+    <Compile Include="Presentacion\Personal\NuevoEditarPersonal.Designer.cs">
+      <DependentUpon>NuevoEditarPersonal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Personal\Personal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Personal\Personal.Designer.cs">
       <DependentUpon>Personal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Planes.cs">
+    <Compile Include="Presentacion\Planes\NuevoEditarPlan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Planes.Designer.cs">
+    <Compile Include="Presentacion\Planes\NuevoEditarPlan.Designer.cs">
+      <DependentUpon>NuevoEditarPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Planes\Planes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Planes\Planes.Designer.cs">
       <DependentUpon>Planes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\Asistencias.resx">
+    <EmbeddedResource Include="Presentacion\Asistencias\Asistencias.resx">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Caja.resx">
+    <EmbeddedResource Include="Presentacion\Caja\Caja.resx">
       <DependentUpon>Caja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Clientes.resx">
+    <EmbeddedResource Include="Presentacion\Clientes\Clientes.resx">
       <DependentUpon>Clientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Dashboard.resx">
@@ -165,8 +195,11 @@
     <EmbeddedResource Include="Presentacion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Personal.resx">
+    <EmbeddedResource Include="Presentacion\Personal\Personal.resx">
       <DependentUpon>Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Planes\NuevoEditarPlan.resx">
+      <DependentUpon>NuevoEditarPlan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -233,6 +266,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\dumbbell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
