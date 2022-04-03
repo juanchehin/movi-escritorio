@@ -16,5 +16,10 @@ namespace movi_escritorio.Presentacion
         {
             InitializeComponent();
         }
+
+        private void dataListadoEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
