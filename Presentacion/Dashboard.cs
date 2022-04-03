@@ -16,5 +16,11 @@ namespace movi_escritorio.Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            Informacion frm = new Informacion();
+            frm.Show();
+        }
     }
 }
