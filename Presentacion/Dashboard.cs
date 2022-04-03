@@ -22,5 +22,40 @@ namespace movi_escritorio.Presentacion
             Informacion frm = new Informacion();
             frm.Show();
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            Clientes frm = new Clientes();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void btnPlanes_Click(object sender, EventArgs e)
+        {
+            Planes frm = new Planes();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void btnCaja_Click(object sender, EventArgs e)
+        {
+            Caja frm = new Caja();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void btnPersonal_Click(object sender, EventArgs e)
+        {
+            Personal frm = new Personal();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+        private void btnAsistencias_Click(object sender, EventArgs e)
+        {
+            Asistencias frm = new Asistencias();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
     }
 }

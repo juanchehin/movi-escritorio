@@ -89,11 +89,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\CD_Caja.cs" />
     <Compile Include="Datos\CD_Clientes.cs" />
     <Compile Include="Datos\CD_Conexion.cs" />
+    <Compile Include="Datos\CD_Personal.cs" />
+    <Compile Include="Datos\CD_Planes.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Logica\CL_Clientes.cs" />
     <Compile Include="Logica\CL_Usuarios.cs" />
+    <Compile Include="Presentacion\Asistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Asistencias.Designer.cs">
+      <DependentUpon>Asistencias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\Caja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +147,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\Asistencias.resx">
+      <DependentUpon>Asistencias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Caja.resx">
       <DependentUpon>Caja.cs</DependentUpon>
     </EmbeddedResource>

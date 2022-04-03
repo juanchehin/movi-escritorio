@@ -32,15 +32,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAsistencias = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPersonal = new System.Windows.Forms.Button();
+            this.btnCaja = new System.Windows.Forms.Button();
+            this.btnPlanes = new System.Windows.Forms.Button();
+            this.btnClientes = new System.Windows.Forms.Button();
             this.btnAyuda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -59,15 +59,15 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.btnAsistencias);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnPersonal);
+            this.groupBox1.Controls.Add(this.btnCaja);
+            this.groupBox1.Controls.Add(this.btnPlanes);
+            this.groupBox1.Controls.Add(this.btnClientes);
             this.groupBox1.Location = new System.Drawing.Point(106, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(689, 373);
@@ -84,14 +84,15 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Asistencias";
             // 
-            // button5
+            // btnAsistencias
             // 
-            this.button5.Image = global::movi_escritorio.Properties.Resources.checklist;
-            this.button5.Location = new System.Drawing.Point(6, 207);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(141, 123);
-            this.button5.TabIndex = 9;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAsistencias.Image = global::movi_escritorio.Properties.Resources.checklist;
+            this.btnAsistencias.Location = new System.Drawing.Point(6, 207);
+            this.btnAsistencias.Name = "btnAsistencias";
+            this.btnAsistencias.Size = new System.Drawing.Size(141, 123);
+            this.btnAsistencias.TabIndex = 9;
+            this.btnAsistencias.UseVisualStyleBackColor = true;
+            this.btnAsistencias.Click += new System.EventHandler(this.btnAsistencias_Click);
             // 
             // label4
             // 
@@ -129,41 +130,45 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Clientes";
             // 
-            // button4
+            // btnPersonal
             // 
-            this.button4.Image = global::movi_escritorio.Properties.Resources.coach;
-            this.button4.Location = new System.Drawing.Point(507, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 123);
-            this.button4.TabIndex = 4;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnPersonal.Image = global::movi_escritorio.Properties.Resources.coach;
+            this.btnPersonal.Location = new System.Drawing.Point(507, 33);
+            this.btnPersonal.Name = "btnPersonal";
+            this.btnPersonal.Size = new System.Drawing.Size(141, 123);
+            this.btnPersonal.TabIndex = 4;
+            this.btnPersonal.UseVisualStyleBackColor = true;
+            this.btnPersonal.Click += new System.EventHandler(this.btnPersonal_Click);
             // 
-            // button2
+            // btnCaja
             // 
-            this.button2.Image = global::movi_escritorio.Properties.Resources.cashier;
-            this.button2.Location = new System.Drawing.Point(343, 33);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(141, 123);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCaja.Image = global::movi_escritorio.Properties.Resources.cashier;
+            this.btnCaja.Location = new System.Drawing.Point(343, 33);
+            this.btnCaja.Name = "btnCaja";
+            this.btnCaja.Size = new System.Drawing.Size(141, 123);
+            this.btnCaja.TabIndex = 3;
+            this.btnCaja.UseVisualStyleBackColor = true;
+            this.btnCaja.Click += new System.EventHandler(this.btnCaja_Click);
             // 
-            // button3
+            // btnPlanes
             // 
-            this.button3.Image = global::movi_escritorio.Properties.Resources.dumbbell;
-            this.button3.Location = new System.Drawing.Point(171, 33);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 123);
-            this.button3.TabIndex = 2;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPlanes.Image = global::movi_escritorio.Properties.Resources.dumbbell;
+            this.btnPlanes.Location = new System.Drawing.Point(171, 33);
+            this.btnPlanes.Name = "btnPlanes";
+            this.btnPlanes.Size = new System.Drawing.Size(141, 123);
+            this.btnPlanes.TabIndex = 2;
+            this.btnPlanes.UseVisualStyleBackColor = true;
+            this.btnPlanes.Click += new System.EventHandler(this.btnPlanes_Click);
             // 
-            // button1
+            // btnClientes
             // 
-            this.button1.Image = global::movi_escritorio.Properties.Resources.clientes;
-            this.button1.Location = new System.Drawing.Point(6, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 123);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnClientes.Image = global::movi_escritorio.Properties.Resources.clientes;
+            this.btnClientes.Location = new System.Drawing.Point(6, 33);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Size = new System.Drawing.Size(141, 123);
+            this.btnClientes.TabIndex = 0;
+            this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // btnAyuda
             // 
@@ -197,16 +202,16 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClientes;
+        private System.Windows.Forms.Button btnPlanes;
+        private System.Windows.Forms.Button btnCaja;
+        private System.Windows.Forms.Button btnPersonal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAyuda;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAsistencias;
         private System.Windows.Forms.Label label5;
     }
 }
