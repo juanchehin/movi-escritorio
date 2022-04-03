@@ -22,5 +22,27 @@ namespace movi_escritorio.Presentacion
             Informacion frm = new Informacion();
             frm.Show();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            string Datos = Logica.CL_Usuarios.Login(this.txtUsuario.Text, this.txtContraseña.Text);
+            //Evaluar si existe el Usuario
+            if (Datos != "Ok")
+            {
+                MessageBox.Show("Error de login", "Movi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Dashboard frm = new Dashboard();
+                frm.Show();
+                this.Hide();
+
+            }
+        }
     }
 }
