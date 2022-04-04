@@ -151,7 +151,7 @@ namespace movi_escritorio.Presentacion.Personal
                         string selected = this.cbTipoDoc.GetItemText(this.cbTipoDoc.SelectedItem);
                         MessageBox.Show(selected);
 
-                        rpta = CL_Personal.Insertar(this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtDocumento.Text.Trim(),this.cbTipoDoc.Text, this.dtpFechaNac.Value.Date.ToString("dd/MM/yyyy"),Convert.ToInt32(this.txtNro.Text),this.txtTelefono.Text.Trim(), this.cbSexo.Text.Trim(), this.txtCorreo.Text.Trim(), this.txtCalle.Text.Trim(),this.rtbObservaciones.Text.Trim());
+                        rpta = CL_Personal.Insertar(this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtDocumento.Text.Trim(), Convert.ToString(this.cbTipoDoc.SelectedValue), this.dtpFechaNac.Value.Date.ToString("yyyy-MM-dd"),Convert.ToInt32(this.txtNro.Text),this.txtTelefono.Text.Trim(), this.cbSexo.Text.Trim(), this.txtCorreo.Text.Trim(), this.txtCalle.Text.Trim(),this.rtbObservaciones.Text.Trim(),this.txtPassword.Text.Trim(), this.txtUsuario.Text.Trim());
                     }
                     else
                     {

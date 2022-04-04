@@ -14,6 +14,7 @@ namespace movi_escritorio.Datos
         private string _Documento;
         private string _TipoDocumento;
         private string _Telefono;
+        private string _Usuario;
         private string _Sexo;
         private string _Correo;
         private string _Calle;
@@ -34,6 +35,7 @@ namespace movi_escritorio.Datos
         public int IdPersona { get => _IdPersona; set => _IdPersona = value; }
         public string Apellidos { get => _Apellidos; set => _Apellidos = value; }
         public string Nombres { get => _Nombres; set => _Nombres = value; }
+        public string Usuario { get => _Usuario; set => _Usuario = value; }
         public string Password { get => _Password; set => _Password = value; }
         public string Documento { get => _Documento; set => _Documento = value; }
         public string TipoDocumento { get => _TipoDocumento; set => _TipoDocumento = value; }
@@ -260,12 +262,12 @@ namespace movi_escritorio.Datos
                 pDocumento.Value = Personal.Documento;
                 comando.Parameters.Add(pDocumento);
 
-                MySqlParameter pTipoDoc = new MySqlParameter();
-                pTipoDoc.ParameterName = "@pTipoDoc";
-                pTipoDoc.MySqlDbType = MySqlDbType.VarChar;
-                pTipoDoc.Size = 60;
-                pTipoDoc.Value = Personal.TipoDocumento;
-                comando.Parameters.Add(pTipoDoc);
+                MySqlParameter pIdTipoDocumento = new MySqlParameter();
+                pIdTipoDocumento.ParameterName = "@pIdTipoDocumento";
+                pIdTipoDocumento.MySqlDbType = MySqlDbType.VarChar;
+                pIdTipoDocumento.Size = 60;
+                pIdTipoDocumento.Value = Personal.TipoDocumento;
+                comando.Parameters.Add(pIdTipoDocumento);
 
                 MySqlParameter pTelefono = new MySqlParameter();
                 pTelefono.ParameterName = "@pTelefono";
@@ -295,6 +297,20 @@ namespace movi_escritorio.Datos
                 pTelefono.Value = Personal.Telefono;
                 comando.Parameters.Add(pCorreo);
 
+                MySqlParameter pUsuario = new MySqlParameter();
+                pUsuario.ParameterName = "@pUsuario";
+                pUsuario.MySqlDbType = MySqlDbType.VarChar;
+                pUsuario.Size = 60;
+                pUsuario.Value = Personal.Password;
+                comando.Parameters.Add(pUsuario);
+
+                MySqlParameter pPassword = new MySqlParameter();
+                pPassword.ParameterName = "@pPassword";
+                pPassword.MySqlDbType = MySqlDbType.VarChar;
+                pPassword.Size = 60;
+                pPassword.Value = Personal.Telefono;
+                comando.Parameters.Add(pPassword);
+
                 MySqlParameter pCalle = new MySqlParameter();
                 pCalle.ParameterName = "@pCalle";
                 pCalle.MySqlDbType = MySqlDbType.VarChar;
@@ -302,12 +318,12 @@ namespace movi_escritorio.Datos
                 pTelefono.Value = Personal.Telefono;
                 comando.Parameters.Add(pCalle);
 
-                MySqlParameter pNro = new MySqlParameter();
-                pNro.ParameterName = "@pNro";
-                pNro.MySqlDbType = MySqlDbType.Int32;
+                MySqlParameter pNumero = new MySqlParameter();
+                pNumero.ParameterName = "@pNumero";
+                pNumero.MySqlDbType = MySqlDbType.Int32;
                 // pNro.Size = 60;
-                pTelefono.Value = Personal.NumeroCalle;
-                comando.Parameters.Add(pNro);
+                pNumero.Value = Personal.NumeroCalle;
+                comando.Parameters.Add(pNumero);
 
                 MySqlParameter pObservaciones = new MySqlParameter();
                 pObservaciones.ParameterName = "@pObservaciones";

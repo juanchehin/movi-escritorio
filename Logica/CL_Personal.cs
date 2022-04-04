@@ -11,7 +11,7 @@ namespace movi_escritorio.Logica
         //Método Insertar que llama al método Insertar de la clase
         //de la CapaDatos
         public static string Insertar(string Apellidos, string Nombres, string Documento, string TipoDocumento,
-            string FechaNac, int NumeroCalle,
+            string FechaNac, int NumeroCalle, string Usuario, string Password,
             string Telefono, string Sexo, string Correo, string Calle, string Observaciones)
         {
 
@@ -26,6 +26,8 @@ namespace movi_escritorio.Logica
             Obj.FechaNac = FechaNac;
             Obj.Correo = Correo;
             Obj.Calle = Calle;
+            Obj.Usuario = Usuario;
+            Obj.Password = Password;
             Obj.NumeroCalle = NumeroCalle;
             Obj.Observaciones = Observaciones;
 
