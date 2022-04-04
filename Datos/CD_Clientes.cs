@@ -1,10 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace movi_escritorio.Datos
 {
@@ -12,6 +8,16 @@ namespace movi_escritorio.Datos
     {
         private int _IdPersona;
         private string _IdPlan;
+        private string _Apellidos;
+        private string _Nombres;
+        private string _Password;
+        private string _Documento;
+        private string _Telefono;
+        private string _Sexo;
+        private string _Correo;
+        private string _Calle;
+        private string _Observaciones;
+
         private string _Estado;
         private string _Ocupacion;
         private string _FechaInicio;
@@ -23,6 +29,15 @@ namespace movi_escritorio.Datos
 
 
         public int IdPersona { get => _IdPersona; set => _IdPersona = value; }
+        public string Apellidos { get => _Apellidos; set => _Apellidos = value; }
+        public string Nombres { get => _Nombres; set => _Nombres = value; }
+        public string Password { get => _Password; set => _Password = value; }
+        public string Documento { get => _Documento; set => _Documento = value; }
+        public string Telefono { get => _Telefono; set => _Telefono = value; }
+        public string Sexo { get => _Sexo; set => _Sexo = value; }
+        public string Correo { get => _Correo; set => _Correo = value; }
+        public string Calle { get => _Calle; set => _Calle = value; }
+        public string Observaciones { get => _Observaciones; set => _Observaciones = value; }
         public string IdPlan { get => _IdPlan; set => _IdPlan = value; }
         public string Estado { get => _Estado; set => _Estado = value; }
         public string Ocupacion { get => _Ocupacion; set => _Ocupacion = value; }
@@ -38,7 +53,8 @@ namespace movi_escritorio.Datos
         }
 
         public CD_Clientes(int IdPersona, string IdPlan, string Estado, string Ocupacion, string FechaInicio, string Horario, 
-            string ClasesDisponibles, string MesesCredito)
+            string ClasesDisponibles, string MesesCredito, string Apellidos, string Nombres, string Password, string Documento
+            , string Telefono, string Sexo, string Correo, string Calle, string Observaciones)
         {
             this.IdPersona = IdPersona;
             this.IdPlan = IdPlan;
@@ -48,7 +64,17 @@ namespace movi_escritorio.Datos
             this.Horario = Horario;
             this.ClasesDisponibles = ClasesDisponibles;
             this.MesesCredito = MesesCredito;
-            
+
+            this.Apellidos = Apellidos;
+            this.Nombres = Nombres;
+            this.Password = Password;
+            this.Documento = Documento;
+            this.Telefono = Telefono;
+            this.Sexo = Sexo;
+            this.Correo = Correo;
+            this.Calle = Calle;
+            this.Observaciones = Observaciones;
+
         }
 
 
@@ -62,13 +88,36 @@ namespace movi_escritorio.Datos
         DataTable tabla = new DataTable();
         MySqlCommand comando = new MySqlCommand();
 
-
-        public DataTable Mostrar()
+        // ==================================================
+        //  Busca clientes en la BD segun coincidencia de busqueda
+        //  Inicialmente muestra todos los clientes
+        // ==================================================
+        public DataTable BuscarClientes(string Apellidos,string Nombres,int IdPlan)
         {
-
             comando.Connection = conexion.AbrirConexion();
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = "bsp_dame_clientes";
+            comando.CommandText = "bsp_buscar_cliente_plan_estado";
+
+            MySqlParameter pApellidos = new MySqlParameter();
+            pApellidos.ParameterName = "@pApellidos";
+            pApellidos.MySqlDbType = MySqlDbType.VarChar;
+            pApellidos.Size = 60;
+            pApellidos.Value = Apellidos;
+            comando.Parameters.Add(pApellidos);
+
+            MySqlParameter pNombres = new MySqlParameter();
+            pNombres.ParameterName = "@pNombres";
+            pNombres.MySqlDbType = MySqlDbType.VarChar;
+            pNombres.Size = 30;
+            pNombres.Value = Nombres;
+            comando.Parameters.Add(pNombres);
+
+            MySqlParameter pIdPlan = new MySqlParameter();
+            pIdPlan.ParameterName = "@pIdPlan";
+            pIdPlan.MySqlDbType = MySqlDbType.Int32;
+            pIdPlan.Size = 15;
+            pIdPlan.Value = IdPlan;
+            comando.Parameters.Add(pIdPlan);
 
             tabla.Clear();
             leer = comando.ExecuteReader();
@@ -92,6 +141,8 @@ namespace movi_escritorio.Datos
             // pIdProducto.Size = 60;
             pIdPersona.Value = IdPersona;
             comando.Parameters.Add(pIdPersona);
+
+
 
             leer = comando.ExecuteReader();
             tabla.Load(leer);

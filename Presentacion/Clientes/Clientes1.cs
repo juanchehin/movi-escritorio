@@ -1,36 +1,27 @@
 ﻿using movi_escritorio.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace movi_escritorio.Presentacion
+namespace movi_escritorio.Presentacion.Clientes
 {
-    public partial class Clientes : Form
+    public partial class Clientes1 : Form
     {
-        CL_Clientes objetoCN = new CL_Clientes();
-
-        private int IdCliente;
-
-        public Clientes()
+        public Clientes1()
         {
             InitializeComponent();
-            MostrarClientes();
         }
+
+        CL_Clientes objetoCL = new CL_Clientes();
+
+        private int IdCliente;
 
         private void Form1_Load(object sender, EventArgs e)
         {
             MostrarClientes();
-
         }
         public void MostrarClientes()
         {
-            dataListadoClientes.DataSource = objetoCN.MostrarClientes();
+            dataListadoClientes.DataSource = objetoCL.MostrarClientes(this.txtApellidos.Text, this.txtNombres.Text,0);
             dataListadoClientes.Columns[0].Visible = false;
             lblTotalClientes.Text = "Total de Registros: " + Convert.ToString(dataListadoClientes.Rows.Count);
             // this.banderaFormularioHijo = false;
@@ -45,10 +36,7 @@ namespace movi_escritorio.Presentacion
         private void MensajeOk(string mensaje)
         {
             MessageBox.Show(mensaje, "Movi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
         }
-
-
         //Mostrar Mensaje de Error
         private void MensajeError(string mensaje)
         {
@@ -78,8 +66,8 @@ namespace movi_escritorio.Presentacion
 
         private void BuscarCliente()
         {
-            Console.WriteLine("this.txtBuscar.Text es " + this.txtBuscar.Text);
-            this.dataListadoClientes.DataSource = objetoCN.BuscarCliente(this.txtBuscar.Text);
+            Console.WriteLine("this.txtBuscar.Text es " + this.txtNombres.Text);
+            this.dataListadoClientes.DataSource = objetoCL.BuscarCliente(this.txtNombres.Text);
             // this.OcultarColumnas();
             lblTotalClientes.Text = "Total de Registros: " + Convert.ToString(dataListadoClientes.Rows.Count);
         }
@@ -92,9 +80,9 @@ namespace movi_escritorio.Presentacion
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             Console.WriteLine("this.IdCliente en click nuevo es  : " + this.IdCliente);
-            // formNuevoEditarClientes frm = new formNuevoEditarClientes(this.IdCliente, true);
-            // frm.MdiParent = this.MdiParent;
-            // frm.Show();
+            Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, true);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
             this.Close();
         }
 
@@ -111,9 +99,9 @@ namespace movi_escritorio.Presentacion
 
         private void botonEditarListado_Click_1(object sender, EventArgs e)
         {
-            // formNuevoEditarClientes frm = new formNuevoEditarClientes(this.IdCliente, false);
-            // frm.MdiParent = this.MdiParent;
-            // frm.Show();
+            Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, false);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
             this.Close();
         }
 
@@ -155,5 +143,6 @@ namespace movi_escritorio.Presentacion
         {
             this.MostrarClientes();
         }
+
     }
 }
