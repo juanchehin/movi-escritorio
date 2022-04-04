@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CajaPrincipal));
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.lblTotalClientes = new System.Windows.Forms.Label();
             this.btnNuevoCliente = new System.Windows.Forms.Button();
@@ -44,12 +44,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtpFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 102);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 53;
+            this.dtpFecha.CustomFormat = "";
+            this.dtpFecha.Location = new System.Drawing.Point(13, 102);
+            this.dtpFecha.Name = "dtpFecha";
+            this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtpFecha.TabIndex = 53;
+            this.dtpFecha.ValueChanged += new System.EventHandler(this.dtpFecha_ValueChanged);
             // 
             // btnRefrescar
             // 
@@ -77,6 +79,7 @@
             this.btnNuevoCliente.TabIndex = 50;
             this.btnNuevoCliente.Text = "Nuevo movimiento";
             this.btnNuevoCliente.UseVisualStyleBackColor = true;
+            this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
             // botonEditarListado
             // 
@@ -146,7 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 512);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.lblTotalClientes);
             this.Controls.Add(this.btnNuevoCliente);
@@ -169,7 +172,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label lblTotalClientes;
         private System.Windows.Forms.Button btnNuevoCliente;

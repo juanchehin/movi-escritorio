@@ -155,6 +155,26 @@ namespace movi_escritorio.Presentacion.Clientes
         private void NuevoEditarCliente_Load(object sender, EventArgs e)
         {
             this.ActiveControl = txtApellidos;
+            // Relleno valores de TipoDocumento
+            cbTipoDoc.DisplayMember = "Text";
+            cbTipoDoc.ValueMember = "Value";
+
+            var items = new[] {
+                new { Text = "DNI", Value = "1" },
+                new { Text = "CI", Value = "2" },
+                new { Text = "CU", Value = "3" }
+            };
+
+            cbTipoDoc.DataSource = items;
+
+            // Relleno valores de Sexo
+            cbSexo.DisplayMember = "Text";
+            cbSexo.ValueMember = "Value";
+
+            var items1 = new[] {
+                new { Text = "Hombre", Value = "0" },
+                new { Text = "Mujer", Value = "1" }
+            };
             if (this.bandera)
             {
                 lblEditarNuevo.Text = "Nuevo";

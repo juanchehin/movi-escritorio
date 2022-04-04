@@ -76,33 +76,6 @@ namespace movi_escritorio.Presentacion.Personal
             lblTotalPersonal.Text = "Total de Registros: " + Convert.ToString(dataListadoPersonal.Rows.Count);
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            this.BuscarPersonal();
-        }
-
-        private void btnNuevoCliente_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("this.IdCliente en click nuevo es  : " + this.IdPersonal);
-            //Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, true);
-            //frm.MdiParent = this.MdiParent;
-            //frm.Show();
-            this.Close();
-        }
-
-        private void botonEditarListado_Click_1(object sender, EventArgs e)
-        {
-            //Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, false);
-            //frm.MdiParent = this.MdiParent;
-            //frm.Show();
-            this.Close();
-        }
-
-        private void formClientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             try
@@ -123,20 +96,7 @@ namespace movi_escritorio.Presentacion.Personal
             }
             this.Close();
         }
-
-        private void txtBuscar_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnBuscar_Click(this, new EventArgs());
-            }
-        }
-
-        private void btnRefrescar_Click(object sender, EventArgs e)
-        {
-            this.MostrarPersonal();
-        }
-
+        
 
         private void btnFicha_Click(object sender, EventArgs e)
         {
@@ -170,7 +130,28 @@ namespace movi_escritorio.Presentacion.Personal
 
         private void btnNuevoPersonal_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("this.IdPersonal en click nuevo es  : " + this.IdPersonal);
+            Presentacion.Personal.NuevoEditarPersonal frm = new NuevoEditarPersonal(this.IdPersonal, true);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
 
+        private void btnRefrescar_Click_1(object sender, EventArgs e)
+        {
+            this.MostrarPersonal();
+        }
+
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            this.BuscarPersonal();
+        }
+
+        private void txtBuscar_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                btnBuscar_Click_1(this, new EventArgs());
+            }
         }
 
     }

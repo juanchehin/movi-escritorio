@@ -34,6 +34,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtNro = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,8 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -104,6 +106,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dtpFechaNac);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.label10);
@@ -128,10 +132,42 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(36, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(587, 438);
+            this.groupBox1.Size = new System.Drawing.Size(621, 438);
             this.groupBox1.TabIndex = 28;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Clientes";
+            // 
+            // dtpFechaNac
+            // 
+            this.dtpFechaNac.Location = new System.Drawing.Point(406, 263);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaNac.TabIndex = 36;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(287, 263);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(112, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Fecha de nacimiento :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(35, 259);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(47, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Correo : ";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(109, 256);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(107, 20);
+            this.txtCorreo.TabIndex = 9;
             // 
             // label10
             // 
@@ -147,7 +183,7 @@
             this.txtNro.Location = new System.Drawing.Point(405, 196);
             this.txtNro.Name = "txtNro";
             this.txtNro.Size = new System.Drawing.Size(121, 20);
-            this.txtNro.TabIndex = 30;
+            this.txtNro.TabIndex = 8;
             // 
             // label9
             // 
@@ -186,7 +222,7 @@
             this.rtbObservaciones.Location = new System.Drawing.Point(109, 324);
             this.rtbObservaciones.Name = "rtbObservaciones";
             this.rtbObservaciones.Size = new System.Drawing.Size(279, 96);
-            this.rtbObservaciones.TabIndex = 8;
+            this.rtbObservaciones.TabIndex = 10;
             this.rtbObservaciones.Text = "";
             // 
             // label8
@@ -288,6 +324,7 @@
             this.btnGuardar.TabIndex = 25;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click_1);
             // 
             // pictureBox1
             // 
@@ -299,22 +336,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 27;
             this.pictureBox1.TabStop = false;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(35, 259);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(47, 13);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Correo : ";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(109, 256);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(107, 20);
-            this.txtCorreo.TabIndex = 32;
             // 
             // NuevoEditarPersonal
             // 
@@ -370,5 +391,7 @@
         private System.Windows.Forms.TextBox txtNro;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtCorreo;
+        private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.Label label12;
     }
 }

@@ -95,6 +95,7 @@
     <Compile Include="Datos\CD_Personal.cs" />
     <Compile Include="Datos\CD_Planes.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
+    <Compile Include="Logica\CL_Caja.cs" />
     <Compile Include="Logica\CL_Clientes.cs" />
     <Compile Include="Logica\CL_Personal.cs" />
     <Compile Include="Logica\CL_Usuarios.cs" />
@@ -110,11 +111,11 @@
     <Compile Include="Presentacion\Caja\CajaPrincipal.Designer.cs">
       <DependentUpon>CajaPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Caja\NuevoEditarMovimiento.cs">
+    <Compile Include="Presentacion\Caja\NuevoEditarTransaccion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Caja\NuevoEditarMovimiento.Designer.cs">
-      <DependentUpon>NuevoEditarMovimiento.cs</DependentUpon>
+    <Compile Include="Presentacion\Caja\NuevoEditarTransaccion.Designer.cs">
+      <DependentUpon>NuevoEditarTransaccion.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Clientes\ClientesPrincipal.cs">
       <SubType>Form</SubType>

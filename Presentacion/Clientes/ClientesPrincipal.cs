@@ -59,28 +59,6 @@ namespace movi_escritorio.Presentacion.Clientes
             this.BuscarCliente();
         }
 
-        private void btnNuevoCliente_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("this.IdCliente en click nuevo es  : " + this.IdCliente);
-            //Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, true);
-            //frm.MdiParent = this.MdiParent;
-            //frm.Show();
-            this.Close();
-        }
-
-        private void botonEditarListado_Click_1(object sender, EventArgs e)
-        {
-            //Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, false);
-            //frm.MdiParent = this.MdiParent;
-            //frm.Show();
-            this.Close();
-        }
-
-        private void formClientes_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnEliminar_Click_1(object sender, EventArgs e)
         {
             try
@@ -148,6 +126,13 @@ namespace movi_escritorio.Presentacion.Clientes
                 this.IdCliente = Convert.ToInt32(selectedRow.Cells["IdPersona"].Value);
                 Console.WriteLine("El id IdCliente es " + this.IdCliente);
             }
+        }
+
+        private void btnNuevoCliente_Click_1(object sender, EventArgs e)
+        {
+            Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, true);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
     }
 }

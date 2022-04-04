@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace movi_escritorio.Presentacion.Caja
 {
-    public partial class NuevoEditarMovimiento : Form
+    public partial class NuevoEditarTransaccion : Form
     {
-        public NuevoEditarMovimiento()
+        public NuevoEditarTransaccion(int idTransaccion)
         {
             InitializeComponent();
         }

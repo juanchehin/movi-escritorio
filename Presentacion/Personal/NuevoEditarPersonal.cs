@@ -1,12 +1,6 @@
 ﻿using movi_escritorio.Logica;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace movi_escritorio.Presentacion.Personal
@@ -85,7 +79,63 @@ namespace movi_escritorio.Presentacion.Personal
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void NuevoEditarPersonal_Load(object sender, EventArgs e)
+        {
+            // Relleno valores de TipoDocumento
+            cbTipoDoc.DisplayMember = "Text";
+            cbTipoDoc.ValueMember = "Value";
+
+            var items = new[] {
+                new { Text = "DNI", Value = "1" },
+                new { Text = "CI", Value = "2" },
+                new { Text = "CU", Value = "3" }
+            };
+
+            cbTipoDoc.DataSource = items;
+
+            // Relleno valores de Sexo
+            cbSexo.DisplayMember = "Text";
+            cbSexo.ValueMember = "Value";
+
+            var items1 = new[] {
+                new { Text = "Hombre", Value = "0" },
+                new { Text = "Mujer", Value = "1" }
+            };
+
+            cbSexo.DataSource = items1;
+
+            this.ActiveControl = txtApellidos;
+            Console.WriteLine("this.bandera es : ", this.bandera);
+            if (this.bandera)
+            {
+                lblEditarNuevo.Text = "Nuevo";
+                // this.MostrarProducto(this.IdProducto);
+                this.IsNuevo = true;
+                this.IsEditar = false;
+            }
+            else
+            {
+                lblEditarNuevo.Text = "Ficha";
+                this.IsNuevo = false;
+                this.IsEditar = true;
+                Console.WriteLine("this.IdPersonal es : ", this.IdPersonal);
+                this.MostrarPersonal(this.IdPersonal);
+            }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
+        private void btnGuardar_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -98,9 +148,10 @@ namespace movi_escritorio.Presentacion.Personal
                 {
                     if (this.IsNuevo)
                     {
-                        rpta = CL_Personal.Insertar(this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(),
-                            this.txtDocumento.Text.Trim(), this.txtTelefono.Text.Trim(), this.cbSexo.Text.Trim(), this.txtCorreo.Text.Trim()
-                            , this.txtCalle.Text.Trim(), this.rtbObservaciones.Text.Trim());
+                        string selected = this.cbTipoDoc.GetItemText(this.cbTipoDoc.SelectedItem);
+                        MessageBox.Show(selected);
+
+                        rpta = CL_Personal.Insertar(this.txtApellidos.Text.Trim(), this.txtNombres.Text.Trim(), this.txtDocumento.Text.Trim(),this.cbTipoDoc.Text, this.dtpFechaNac.Value.Date.ToString("dd/MM/yyyy"),Convert.ToInt32(this.txtNro.Text),this.txtTelefono.Text.Trim(), this.cbSexo.Text.Trim(), this.txtCorreo.Text.Trim(), this.txtCalle.Text.Trim(),this.rtbObservaciones.Text.Trim());
                     }
                     else
                     {
@@ -132,57 +183,6 @@ namespace movi_escritorio.Presentacion.Personal
             this.Close();
         }
 
-
-        private void btnCancelar_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void NuevoEditarCliente_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = txtApellidos;
-            if (this.bandera)
-            {
-                lblEditarNuevo.Text = "Nuevo";
-                // this.MostrarProducto(this.IdProducto);
-                this.IsNuevo = true;
-                this.IsEditar = false;
-            }
-            else
-            {
-                lblEditarNuevo.Text = "Editar";
-                this.IsNuevo = false;
-                this.IsEditar = true;
-                this.MostrarPersonal(this.IdPersonal);
-            }
-        }       
-
-        private void NuevoEditarPersonal_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = txtApellidos;
-            Console.WriteLine("this.bandera es : ", this.bandera);
-            if (this.bandera)
-            {
-                lblEditarNuevo.Text = "Nuevo";
-                // this.MostrarProducto(this.IdProducto);
-                this.IsNuevo = true;
-                this.IsEditar = false;
-            }
-            else
-            {
-                lblEditarNuevo.Text = "Ficha";
-                this.IsNuevo = false;
-                this.IsEditar = true;
-                Console.WriteLine("this.IdPersonal es : ", this.IdPersonal);
-                this.MostrarPersonal(this.IdPersonal);
-            }
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         //Mostrar Mensaje de Error
         private void MensajeError(string mensaje)
         {
@@ -193,5 +193,6 @@ namespace movi_escritorio.Presentacion.Personal
             MessageBox.Show(mensaje, "Movi", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
     }
 }

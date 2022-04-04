@@ -53,6 +53,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(31, 32);
             this.btnRefrescar.TabIndex = 54;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click_1);
             // 
             // label2
             // 
@@ -88,6 +89,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(181, 20);
             this.txtBuscar.TabIndex = 48;
+            this.txtBuscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscar_KeyPress);
             // 
             // btnFicha
             // 
@@ -115,6 +117,7 @@
             this.btnBuscar.TabIndex = 47;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
             // 
             // dataListadoPersonal
             // 

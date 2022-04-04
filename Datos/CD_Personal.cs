@@ -12,15 +12,18 @@ namespace movi_escritorio.Datos
         private string _Nombres;
         private string _Password;
         private string _Documento;
+        private string _TipoDocumento;
         private string _Telefono;
         private string _Sexo;
         private string _Correo;
         private string _Calle;
+        private int _NumeroCalle;        
         private string _Observaciones;
 
         private string _Estado;
         private string _Ocupacion;
         private string _FechaInicio;
+        private string _FechaNac;
         private string _Horario;
         private string _ClasesDisponibles;
         private string _MesesCredito;
@@ -33,13 +36,16 @@ namespace movi_escritorio.Datos
         public string Nombres { get => _Nombres; set => _Nombres = value; }
         public string Password { get => _Password; set => _Password = value; }
         public string Documento { get => _Documento; set => _Documento = value; }
+        public string TipoDocumento { get => _TipoDocumento; set => _TipoDocumento = value; }
         public string Telefono { get => _Telefono; set => _Telefono = value; }
         public string Sexo { get => _Sexo; set => _Sexo = value; }
         public string Correo { get => _Correo; set => _Correo = value; }
         public string Calle { get => _Calle; set => _Calle = value; }
+        public int NumeroCalle { get => _NumeroCalle; set => _NumeroCalle = value; }
         public string Observaciones { get => _Observaciones; set => _Observaciones = value; }
         public string Estado { get => _Estado; set => _Estado = value; }
         public string FechaInicio { get => _FechaInicio; set => _FechaInicio = value; }
+        public string FechaNac { get => _FechaNac; set => _FechaNac = value; }
         public string Horario { get => _Horario; set => _Horario = value; }
 
         //Constructores
@@ -128,8 +134,6 @@ namespace movi_escritorio.Datos
             pIdPersona.Value = IdPersona;
             comando.Parameters.Add(pIdPersona);
 
-
-
             leer = comando.ExecuteReader();
             tabla.Load(leer);
 
@@ -158,26 +162,54 @@ namespace movi_escritorio.Datos
                 pIdPersona.Value = Personal.IdPersona;
                 comando.Parameters.Add(pIdPersona);
 
-                MySqlParameter pTransporte = new MySqlParameter();
-                pTransporte.ParameterName = "@pTransporte";
-                pTransporte.MySqlDbType = MySqlDbType.VarChar;
-                pTransporte.Size = 60;
-                //pTransporte.Value = Cliente.Transporte;
-                comando.Parameters.Add(pTransporte);
-
-                MySqlParameter pTitular = new MySqlParameter();
-                pTitular.ParameterName = "@pTitular";
-                pTitular.MySqlDbType = MySqlDbType.VarChar;
-                pTitular.Size = 30;
-                //pTitular.Value = Cliente.Titular;
-                comando.Parameters.Add(pTitular);
-
                 MySqlParameter pTelefono = new MySqlParameter();
                 pTelefono.ParameterName = "@pTelefono";
                 pTelefono.MySqlDbType = MySqlDbType.VarChar;
                 pTelefono.Size = 15;
                 //pTelefono.Value = Cliente.Telefono;
                 comando.Parameters.Add(pTelefono);
+
+                MySqlParameter pSexo = new MySqlParameter();
+                pSexo.ParameterName = "@pSexo";
+                pSexo.MySqlDbType = MySqlDbType.Int32;
+                pSexo.Size = 15;
+                //pTelefono.Value = Cliente.Telefono;
+                comando.Parameters.Add(pSexo);
+
+                MySqlParameter pFechaNac = new MySqlParameter();
+                pFechaNac.ParameterName = "@pFechaNac";
+                pFechaNac.MySqlDbType = MySqlDbType.Date;
+                // pFechaNac.Size = 15;
+                //pTelefono.Value = Cliente.Telefono;
+                comando.Parameters.Add(pFechaNac);
+
+                MySqlParameter pCorreo = new MySqlParameter();
+                pCorreo.ParameterName = "@pCorreo";
+                pCorreo.MySqlDbType = MySqlDbType.VarChar;
+                pCorreo.Size = 60;
+                //pTelefono.Value = Cliente.Telefono;
+                comando.Parameters.Add(pCorreo);
+
+                MySqlParameter pCalle = new MySqlParameter();
+                pCalle.ParameterName = "@pCalle";
+                pCalle.MySqlDbType = MySqlDbType.VarChar;
+                pCalle.Size = 60;
+                //pTelefono.Value = Cliente.Telefono;
+                comando.Parameters.Add(pCalle);
+
+                MySqlParameter pNro = new MySqlParameter();
+                pNro.ParameterName = "@pNro";
+                pNro.MySqlDbType = MySqlDbType.Int32;
+                // pNro.Size = 60;
+                //pTelefono.Value = Cliente.Telefono;
+                comando.Parameters.Add(pNro);
+
+                MySqlParameter pObservaciones = new MySqlParameter();
+                pObservaciones.ParameterName = "@pObservaciones";
+                pObservaciones.MySqlDbType = MySqlDbType.VarChar;
+                pObservaciones.Size = 60;
+                //pTelefono.Value = Cliente.Telefono;
+                comando.Parameters.Add(pObservaciones);
 
                 rpta = comando.ExecuteScalar().ToString() == "Ok" ? "OK" : "No se edito el Registro";
 
@@ -198,7 +230,7 @@ namespace movi_escritorio.Datos
 
         //Métodos
         //Insertar
-        public string Insertar(CD_Clientes Cliente)
+        public string Insertar(CD_Personal Personal)
         {
             string rpta = "";
             try
@@ -207,28 +239,82 @@ namespace movi_escritorio.Datos
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.CommandText = "bsp_alta_entrenador";
 
-                MySqlParameter pTitular = new MySqlParameter();
-                pTitular.ParameterName = "@pTitular";
-                pTitular.MySqlDbType = MySqlDbType.VarChar;
-                pTitular.Size = 60;
-                //pTitular.Value = Cliente.Titular;
-                comando.Parameters.Add(pTitular);
+                MySqlParameter pApellidos = new MySqlParameter();
+                pApellidos.ParameterName = "@pApellidos";
+                pApellidos.MySqlDbType = MySqlDbType.VarChar;
+                pApellidos.Size = 60;
+                pApellidos.Value = Personal.Apellidos;
+                comando.Parameters.Add(pApellidos);
 
-                // Console.WriteLine("pNombre es : " + pNombre.Value);
+                MySqlParameter pNombres = new MySqlParameter();
+                pNombres.ParameterName = "@pNombres";
+                pNombres.MySqlDbType = MySqlDbType.VarChar;
+                pNombres.Size = 60;
+                pNombres.Value = Personal.Nombres;
+                comando.Parameters.Add(pNombres);
 
-                MySqlParameter pTransporte = new MySqlParameter();
-                pTransporte.ParameterName = "@pTransporte";
-                pTransporte.MySqlDbType = MySqlDbType.VarChar;
-                pTransporte.Size = 60;
-                //pTransporte.Value = Cliente.Transporte;
-                comando.Parameters.Add(pTransporte);
+                MySqlParameter pDocumento = new MySqlParameter();
+                pDocumento.ParameterName = "@pDocumento";
+                pDocumento.MySqlDbType = MySqlDbType.VarChar;
+                pDocumento.Size = 60;
+                pDocumento.Value = Personal.Documento;
+                comando.Parameters.Add(pDocumento);
+
+                MySqlParameter pTipoDoc = new MySqlParameter();
+                pTipoDoc.ParameterName = "@pTipoDoc";
+                pTipoDoc.MySqlDbType = MySqlDbType.VarChar;
+                pTipoDoc.Size = 60;
+                pTipoDoc.Value = Personal.TipoDocumento;
+                comando.Parameters.Add(pTipoDoc);
 
                 MySqlParameter pTelefono = new MySqlParameter();
                 pTelefono.ParameterName = "@pTelefono";
-                pTelefono.MySqlDbType = MySqlDbType.VarChar;
+                pTelefono.MySqlDbType = MySqlDbType.Int32;
                 pTelefono.Size = 15;
                 //pTelefono.Value = Cliente.Telefono;
                 comando.Parameters.Add(pTelefono);
+
+                MySqlParameter pSexo = new MySqlParameter();
+                pSexo.ParameterName = "@pSexo";
+                pSexo.MySqlDbType = MySqlDbType.VarChar;
+                pSexo.Size = 15;
+                pTelefono.Value = Personal.Sexo;
+                comando.Parameters.Add(pSexo);
+
+                MySqlParameter pFechaNac = new MySqlParameter();
+                pFechaNac.ParameterName = "@pFechaNac";
+                pFechaNac.MySqlDbType = MySqlDbType.VarChar;
+                pFechaNac.Size = 15;
+                pFechaNac.Value = Personal.FechaNac;
+                comando.Parameters.Add(pFechaNac);
+
+                MySqlParameter pCorreo = new MySqlParameter();
+                pCorreo.ParameterName = "@pCorreo";
+                pCorreo.MySqlDbType = MySqlDbType.VarChar;
+                pCorreo.Size = 60;
+                pTelefono.Value = Personal.Telefono;
+                comando.Parameters.Add(pCorreo);
+
+                MySqlParameter pCalle = new MySqlParameter();
+                pCalle.ParameterName = "@pCalle";
+                pCalle.MySqlDbType = MySqlDbType.VarChar;
+                pCalle.Size = 60;
+                pTelefono.Value = Personal.Telefono;
+                comando.Parameters.Add(pCalle);
+
+                MySqlParameter pNro = new MySqlParameter();
+                pNro.ParameterName = "@pNro";
+                pNro.MySqlDbType = MySqlDbType.Int32;
+                // pNro.Size = 60;
+                pTelefono.Value = Personal.NumeroCalle;
+                comando.Parameters.Add(pNro);
+
+                MySqlParameter pObservaciones = new MySqlParameter();
+                pObservaciones.ParameterName = "@pObservaciones";
+                pObservaciones.MySqlDbType = MySqlDbType.VarChar;
+                pObservaciones.Size = 60;
+                pTelefono.Value = Personal.Observaciones;
+                comando.Parameters.Add(pObservaciones);
 
                 // Console.WriteLine("el comando es : " + comando.CommandText[0]);
                 //Ejecutamos nuestro comando

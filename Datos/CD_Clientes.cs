@@ -143,11 +143,8 @@ namespace movi_escritorio.Datos
             pIdPersona.Value = IdPersona;
             comando.Parameters.Add(pIdPersona);
 
-
-
             leer = comando.ExecuteReader();
             tabla.Load(leer);
-
             comando.Parameters.Clear();
             conexion.CerrarConexion();
 

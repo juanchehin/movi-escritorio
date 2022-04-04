@@ -1,6 +1,6 @@
 ﻿namespace movi_escritorio.Presentacion.Caja
 {
-    partial class NuevoEditarMovimiento
+    partial class NuevoEditarTransaccion
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "NuevoEditarMovimiento";
+            this.Text = "NuevoEditarTransaccion";
         }
 
         #endregion
