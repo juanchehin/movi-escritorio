@@ -31,16 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalPrincipal));
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblTotalEmpleados = new System.Windows.Forms.Label();
-            this.btnNuevoEmpleado = new System.Windows.Forms.Button();
+            this.lblTotalPersonal = new System.Windows.Forms.Label();
+            this.btnNuevoPersonal = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.botonEditarListado = new System.Windows.Forms.Button();
+            this.btnFicha = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataListadoEmpleados = new System.Windows.Forms.DataGridView();
+            this.dataListadoPersonal = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataListadoEmpleados)).BeginInit();
+            this.cbIncluyeBajas = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,23 +63,24 @@
             this.label2.TabIndex = 53;
             this.label2.Text = "Busqueda por apellido o nombre";
             // 
-            // lblTotalEmpleados
+            // lblTotalPersonal
             // 
-            this.lblTotalEmpleados.AutoSize = true;
-            this.lblTotalEmpleados.Location = new System.Drawing.Point(648, 134);
-            this.lblTotalEmpleados.Name = "lblTotalEmpleados";
-            this.lblTotalEmpleados.Size = new System.Drawing.Size(35, 13);
-            this.lblTotalEmpleados.TabIndex = 52;
-            this.lblTotalEmpleados.Text = "label2";
+            this.lblTotalPersonal.AutoSize = true;
+            this.lblTotalPersonal.Location = new System.Drawing.Point(648, 134);
+            this.lblTotalPersonal.Name = "lblTotalPersonal";
+            this.lblTotalPersonal.Size = new System.Drawing.Size(35, 13);
+            this.lblTotalPersonal.TabIndex = 52;
+            this.lblTotalPersonal.Text = "label2";
             // 
-            // btnNuevoEmpleado
+            // btnNuevoPersonal
             // 
-            this.btnNuevoEmpleado.Location = new System.Drawing.Point(472, 104);
-            this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
-            this.btnNuevoEmpleado.Size = new System.Drawing.Size(139, 23);
-            this.btnNuevoEmpleado.TabIndex = 51;
-            this.btnNuevoEmpleado.Text = "Nuevo empleado";
-            this.btnNuevoEmpleado.UseVisualStyleBackColor = true;
+            this.btnNuevoPersonal.Location = new System.Drawing.Point(472, 104);
+            this.btnNuevoPersonal.Name = "btnNuevoPersonal";
+            this.btnNuevoPersonal.Size = new System.Drawing.Size(139, 23);
+            this.btnNuevoPersonal.TabIndex = 51;
+            this.btnNuevoPersonal.Text = "Nuevo personal";
+            this.btnNuevoPersonal.UseVisualStyleBackColor = true;
+            this.btnNuevoPersonal.Click += new System.EventHandler(this.btnNuevoPersonal_Click);
             // 
             // txtBuscar
             // 
@@ -87,14 +89,14 @@
             this.txtBuscar.Size = new System.Drawing.Size(181, 20);
             this.txtBuscar.TabIndex = 48;
             // 
-            // botonEditarListado
+            // btnFicha
             // 
-            this.botonEditarListado.Location = new System.Drawing.Point(310, 104);
-            this.botonEditarListado.Name = "botonEditarListado";
-            this.botonEditarListado.Size = new System.Drawing.Size(75, 23);
-            this.botonEditarListado.TabIndex = 50;
-            this.botonEditarListado.Text = "Editar";
-            this.botonEditarListado.UseVisualStyleBackColor = true;
+            this.btnFicha.Location = new System.Drawing.Point(310, 104);
+            this.btnFicha.Name = "btnFicha";
+            this.btnFicha.Size = new System.Drawing.Size(75, 23);
+            this.btnFicha.TabIndex = 50;
+            this.btnFicha.Text = "Ver ficha";
+            this.btnFicha.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
@@ -114,18 +116,18 @@
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
-            // dataListadoEmpleados
+            // dataListadoPersonal
             // 
-            this.dataListadoEmpleados.AllowUserToAddRows = false;
-            this.dataListadoEmpleados.AllowUserToDeleteRows = false;
-            this.dataListadoEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataListadoEmpleados.Location = new System.Drawing.Point(29, 150);
-            this.dataListadoEmpleados.MultiSelect = false;
-            this.dataListadoEmpleados.Name = "dataListadoEmpleados";
-            this.dataListadoEmpleados.ReadOnly = true;
-            this.dataListadoEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListadoEmpleados.Size = new System.Drawing.Size(765, 291);
-            this.dataListadoEmpleados.TabIndex = 46;
+            this.dataListadoPersonal.AllowUserToAddRows = false;
+            this.dataListadoPersonal.AllowUserToDeleteRows = false;
+            this.dataListadoPersonal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataListadoPersonal.Location = new System.Drawing.Point(29, 150);
+            this.dataListadoPersonal.MultiSelect = false;
+            this.dataListadoPersonal.Name = "dataListadoPersonal";
+            this.dataListadoPersonal.ReadOnly = true;
+            this.dataListadoPersonal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataListadoPersonal.Size = new System.Drawing.Size(765, 291);
+            this.dataListadoPersonal.TabIndex = 46;
             // 
             // label1
             // 
@@ -148,26 +150,38 @@
             this.pictureBox1.TabIndex = 44;
             this.pictureBox1.TabStop = false;
             // 
+            // cbIncluyeBajas
+            // 
+            this.cbIncluyeBajas.AutoSize = true;
+            this.cbIncluyeBajas.Location = new System.Drawing.Point(651, 104);
+            this.cbIncluyeBajas.Name = "cbIncluyeBajas";
+            this.cbIncluyeBajas.Size = new System.Drawing.Size(88, 17);
+            this.cbIncluyeBajas.TabIndex = 55;
+            this.cbIncluyeBajas.Text = "Incluye bajas";
+            this.cbIncluyeBajas.UseVisualStyleBackColor = true;
+            // 
             // PersonalPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(822, 479);
+            this.Controls.Add(this.cbIncluyeBajas);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblTotalEmpleados);
-            this.Controls.Add(this.btnNuevoEmpleado);
+            this.Controls.Add(this.lblTotalPersonal);
+            this.Controls.Add(this.btnNuevoPersonal);
             this.Controls.Add(this.txtBuscar);
-            this.Controls.Add(this.botonEditarListado);
+            this.Controls.Add(this.btnFicha);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.dataListadoEmpleados);
+            this.Controls.Add(this.dataListadoPersonal);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PersonalPrincipal";
             this.Text = "PersonalPrincipal";
-            ((System.ComponentModel.ISupportInitialize)(this.dataListadoEmpleados)).EndInit();
+            this.Load += new System.EventHandler(this.PersonalPrincipal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataListadoPersonal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,14 +192,15 @@
 
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblTotalEmpleados;
-        private System.Windows.Forms.Button btnNuevoEmpleado;
+        private System.Windows.Forms.Label lblTotalPersonal;
+        private System.Windows.Forms.Button btnNuevoPersonal;
         private System.Windows.Forms.TextBox txtBuscar;
-        private System.Windows.Forms.Button botonEditarListado;
+        private System.Windows.Forms.Button btnFicha;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridView dataListadoEmpleados;
+        private System.Windows.Forms.DataGridView dataListadoPersonal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox cbIncluyeBajas;
     }
 }

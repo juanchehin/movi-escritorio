@@ -96,6 +96,7 @@
     <Compile Include="Datos\CD_Planes.cs" />
     <Compile Include="Datos\CD_Usuarios.cs" />
     <Compile Include="Logica\CL_Clientes.cs" />
+    <Compile Include="Logica\CL_Personal.cs" />
     <Compile Include="Logica\CL_Usuarios.cs" />
     <Compile Include="Presentacion\Asistencias\Asistencias.cs">
       <SubType>Form</SubType>

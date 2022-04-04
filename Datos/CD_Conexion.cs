@@ -10,7 +10,7 @@ namespace movi_escritorio.Datos
 {
     public class CD_Conexion
     {
-        MySqlConnection Con = new MySqlConnection("datasource =localhost;username = root;password = '';database=movi");
+        MySqlConnection Con = new MySqlConnection("datasource =localhost;username = root;password = '';database=movi-escritorio");
 
         public CD_Conexion()
         {
