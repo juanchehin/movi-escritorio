@@ -46,6 +46,7 @@
             this.dataListadoClientes = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoClientes)).BeginInit();
@@ -136,7 +137,7 @@
             // 
             // btnFicha
             // 
-            this.btnFicha.Location = new System.Drawing.Point(677, 286);
+            this.btnFicha.Location = new System.Drawing.Point(677, 315);
             this.btnFicha.Name = "btnFicha";
             this.btnFicha.Size = new System.Drawing.Size(75, 23);
             this.btnFicha.TabIndex = 82;
@@ -174,7 +175,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(677, 315);
+            this.btnEliminar.Location = new System.Drawing.Point(677, 344);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 78;
@@ -216,11 +217,21 @@
             this.label1.TabIndex = 75;
             this.label1.Text = "Clientes";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(628, 286);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 23);
+            this.button1.TabIndex = 86;
+            this.button1.Text = "Nuevo ingreso";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // ClientesPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(869, 598);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -266,5 +277,6 @@
         private System.Windows.Forms.DataGridView dataListadoClientes;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

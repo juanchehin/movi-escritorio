@@ -105,7 +105,6 @@ namespace movi_escritorio.Presentacion.Caja
                 int selectedrowindex = dataListadoClientes.SelectedCells[0].RowIndex;
                 DataGridViewRow selectedRow = dataListadoClientes.Rows[selectedrowindex];
                 this.IdTransaccion = Convert.ToInt32(selectedRow.Cells["IdPersona"].Value);
-                Console.WriteLine("El id IdCliente es " + this.IdTransaccion);
             }
         }
 

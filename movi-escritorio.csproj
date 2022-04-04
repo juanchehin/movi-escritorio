@@ -98,6 +98,7 @@
     <Compile Include="Logica\CL_Caja.cs" />
     <Compile Include="Logica\CL_Clientes.cs" />
     <Compile Include="Logica\CL_Personal.cs" />
+    <Compile Include="Logica\CL_Planes.cs" />
     <Compile Include="Logica\CL_Usuarios.cs" />
     <Compile Include="Presentacion\Asistencias\Asistencias.cs">
       <SubType>Form</SubType>
@@ -128,6 +129,12 @@
     </Compile>
     <Compile Include="Presentacion\Clientes\NuevoEditarCliente.Designer.cs">
       <DependentUpon>NuevoEditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\NuevoIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Clientes\NuevoIngreso.Designer.cs">
+      <DependentUpon>NuevoIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Dashboard.cs">
       <SubType>Form</SubType>
@@ -184,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Clientes\NuevoEditarCliente.resx">
       <DependentUpon>NuevoEditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Clientes\NuevoIngreso.resx">
+      <DependentUpon>NuevoIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

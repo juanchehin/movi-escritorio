@@ -73,11 +73,11 @@
             // 
             // btnNuevoCliente
             // 
-            this.btnNuevoCliente.Location = new System.Drawing.Point(456, 99);
+            this.btnNuevoCliente.Location = new System.Drawing.Point(381, 99);
             this.btnNuevoCliente.Name = "btnNuevoCliente";
             this.btnNuevoCliente.Size = new System.Drawing.Size(186, 23);
             this.btnNuevoCliente.TabIndex = 50;
-            this.btnNuevoCliente.Text = "Nuevo movimiento";
+            this.btnNuevoCliente.Text = "Nuevo Egreso";
             this.btnNuevoCliente.UseVisualStyleBackColor = true;
             this.btnNuevoCliente.Click += new System.EventHandler(this.btnNuevoCliente_Click);
             // 
@@ -161,7 +161,7 @@
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CajaPrincipal";
-            this.Text = "CajaPrincipal";
+            this.Text = "Caja";
             ((System.ComponentModel.ISupportInitialize)(this.dataListadoClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

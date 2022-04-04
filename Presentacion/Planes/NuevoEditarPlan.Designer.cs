@@ -34,13 +34,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbObservaciones = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTransporte = new System.Windows.Forms.TextBox();
+            this.txtPlan = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTitular = new System.Windows.Forms.TextBox();
+            this.txtCantClases = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -91,13 +91,13 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.rtbObservaciones);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtTransporte);
+            this.groupBox1.Controls.Add(this.txtPlan);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtTitular);
+            this.groupBox1.Controls.Add(this.txtCantClases);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -108,13 +108,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Plan";
             // 
-            // richTextBox1
+            // rtbObservaciones
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(118, 146);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(279, 96);
-            this.richTextBox1.TabIndex = 8;
-            this.richTextBox1.Text = "";
+            this.rtbObservaciones.Location = new System.Drawing.Point(118, 146);
+            this.rtbObservaciones.Name = "rtbObservaciones";
+            this.rtbObservaciones.Size = new System.Drawing.Size(279, 96);
+            this.rtbObservaciones.TabIndex = 8;
+            this.rtbObservaciones.Text = "";
             // 
             // label8
             // 
@@ -125,12 +125,12 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Observaciones : ";
             // 
-            // textBox1
+            // txtPrecio
             // 
-            this.textBox1.Location = new System.Drawing.Point(405, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtPrecio.Location = new System.Drawing.Point(405, 36);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(121, 20);
+            this.txtPrecio.TabIndex = 2;
             // 
             // label1
             // 
@@ -141,12 +141,12 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Precio : ";
             // 
-            // txtTransporte
+            // txtPlan
             // 
-            this.txtTransporte.Location = new System.Drawing.Point(118, 35);
-            this.txtTransporte.Name = "txtTransporte";
-            this.txtTransporte.Size = new System.Drawing.Size(107, 20);
-            this.txtTransporte.TabIndex = 1;
+            this.txtPlan.Location = new System.Drawing.Point(118, 35);
+            this.txtPlan.Name = "txtPlan";
+            this.txtPlan.Size = new System.Drawing.Size(107, 20);
+            this.txtPlan.TabIndex = 1;
             // 
             // label2
             // 
@@ -157,12 +157,12 @@
             this.label2.TabIndex = 17;
             this.label2.Text = "Cantidad de clases : ";
             // 
-            // txtTitular
+            // txtCantClases
             // 
-            this.txtTitular.Location = new System.Drawing.Point(118, 90);
-            this.txtTitular.Name = "txtTitular";
-            this.txtTitular.Size = new System.Drawing.Size(107, 20);
-            this.txtTitular.TabIndex = 3;
+            this.txtCantClases.Location = new System.Drawing.Point(118, 90);
+            this.txtCantClases.Name = "txtCantClases";
+            this.txtCantClases.Size = new System.Drawing.Size(107, 20);
+            this.txtCantClases.TabIndex = 3;
             // 
             // label3
             // 
@@ -225,15 +225,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtTransporte;
+        private System.Windows.Forms.TextBox txtPlan;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTitular;
+        private System.Windows.Forms.TextBox txtCantClases;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbObservaciones;
         private System.Windows.Forms.Label label8;
     }
 }

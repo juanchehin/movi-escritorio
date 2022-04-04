@@ -33,7 +33,7 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotalEmpleados = new System.Windows.Forms.Label();
-            this.btnNuevoEmpleado = new System.Windows.Forms.Button();
+            this.btnNuevoPlan = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.botonEditarListado = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -84,14 +84,15 @@
             this.lblTotalEmpleados.TabIndex = 64;
             this.lblTotalEmpleados.Text = "label2";
             // 
-            // btnNuevoEmpleado
+            // btnNuevoPlan
             // 
-            this.btnNuevoEmpleado.Location = new System.Drawing.Point(472, 104);
-            this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
-            this.btnNuevoEmpleado.Size = new System.Drawing.Size(139, 23);
-            this.btnNuevoEmpleado.TabIndex = 63;
-            this.btnNuevoEmpleado.Text = "Nuevo plan";
-            this.btnNuevoEmpleado.UseVisualStyleBackColor = true;
+            this.btnNuevoPlan.Location = new System.Drawing.Point(472, 104);
+            this.btnNuevoPlan.Name = "btnNuevoPlan";
+            this.btnNuevoPlan.Size = new System.Drawing.Size(139, 23);
+            this.btnNuevoPlan.TabIndex = 63;
+            this.btnNuevoPlan.Text = "Nuevo plan";
+            this.btnNuevoPlan.UseVisualStyleBackColor = true;
+            this.btnNuevoPlan.Click += new System.EventHandler(this.btnNuevoPlan_Click);
             // 
             // txtBuscar
             // 
@@ -170,7 +171,7 @@
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblTotalEmpleados);
-            this.Controls.Add(this.btnNuevoEmpleado);
+            this.Controls.Add(this.btnNuevoPlan);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.botonEditarListado);
             this.Controls.Add(this.btnEliminar);
@@ -195,7 +196,7 @@
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblTotalEmpleados;
-        private System.Windows.Forms.Button btnNuevoEmpleado;
+        private System.Windows.Forms.Button btnNuevoPlan;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Button botonEditarListado;
         private System.Windows.Forms.Button btnEliminar;

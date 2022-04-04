@@ -131,7 +131,7 @@ namespace movi_escritorio.Presentacion.Personal
         private void btnNuevoPersonal_Click(object sender, EventArgs e)
         {
             Console.WriteLine("this.IdPersonal en click nuevo es  : " + this.IdPersonal);
-            Presentacion.Personal.NuevoEditarPersonal frm = new NuevoEditarPersonal(this.IdPersonal, true);
+            NuevoEditarPersonal frm = new NuevoEditarPersonal(this.IdPersonal, true);
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
