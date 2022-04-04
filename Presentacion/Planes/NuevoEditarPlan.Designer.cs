@@ -208,6 +208,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoEditarPlan";
             this.Text = "NuevoEditarPlan";
+            this.Load += new System.EventHandler(this.NuevoEditarPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

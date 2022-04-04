@@ -134,7 +134,7 @@ namespace movi_escritorio.Datos
             Console.WriteLine("IdPersona en capa datos es : " + IdPersona);
             comando.Connection = conexion.AbrirConexion();
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = "bsp_dame_cliente";
+            comando.CommandText = "bsp_dame_persona";
 
             MySqlParameter pIdPersona = new MySqlParameter();
             pIdPersona.ParameterName = "@pIdPersona";

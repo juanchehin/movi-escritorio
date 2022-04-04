@@ -38,7 +38,7 @@
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFicha = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.lblTotalClientes = new System.Windows.Forms.Label();
             this.btnNuevoCliente = new System.Windows.Forms.Button();
@@ -134,14 +134,15 @@
             this.label4.TabIndex = 58;
             this.label4.Text = "Apellidos : ";
             // 
-            // button1
+            // btnFicha
             // 
-            this.button1.Location = new System.Drawing.Point(677, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 82;
-            this.button1.Text = "Ver ficha";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFicha.Location = new System.Drawing.Point(677, 286);
+            this.btnFicha.Name = "btnFicha";
+            this.btnFicha.Size = new System.Drawing.Size(75, 23);
+            this.btnFicha.TabIndex = 82;
+            this.btnFicha.Text = "Ver ficha";
+            this.btnFicha.UseVisualStyleBackColor = true;
+            this.btnFicha.Click += new System.EventHandler(this.btnFicha_Click);
             // 
             // btnRefrescar
             // 
@@ -191,6 +192,7 @@
             this.dataListadoClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataListadoClientes.Size = new System.Drawing.Size(600, 326);
             this.dataListadoClientes.TabIndex = 77;
+            this.dataListadoClientes.SelectionChanged += new System.EventHandler(this.dataListadoClientes_SelectionChanged_1);
             // 
             // pictureBox1
             // 
@@ -221,7 +223,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFicha);
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.lblTotalClientes);
             this.Controls.Add(this.btnNuevoCliente);
@@ -255,7 +257,7 @@
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFicha;
         private System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Label lblTotalClientes;
         private System.Windows.Forms.Button btnNuevoCliente;

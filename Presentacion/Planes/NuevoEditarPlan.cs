@@ -16,5 +16,10 @@ namespace movi_escritorio.Presentacion.Planes
         {
             InitializeComponent();
         }
+
+        private void NuevoEditarPlan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

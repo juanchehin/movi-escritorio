@@ -47,7 +47,7 @@ namespace movi_escritorio.Logica
         {
 
             DataTable tabla = new DataTable();
-            // tabla = objetoCD.MostrarCliente(IdCliente);
+            tabla = objetoCD.MostrarCliente(IdCliente);
             Console.WriteLine("tabla TableName en capa negocio es : " + tabla.TableName);
             Console.WriteLine("tabla Rows en capa negocio es : " + tabla.Rows);
             return tabla;

@@ -24,21 +24,6 @@ namespace movi_escritorio.Presentacion.Clientes
             // this.banderaFormularioHijo = false;
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        //Mostrar Mensaje de Confirmación
-        private void MensajeOk(string mensaje)
-        {
-            MessageBox.Show(mensaje, "Movi", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        //Mostrar Mensaje de Error
-        private void MensajeError(string mensaje)
-        {
-            MessageBox.Show(mensaje, "Movi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -81,17 +66,6 @@ namespace movi_escritorio.Presentacion.Clientes
             //frm.MdiParent = this.MdiParent;
             //frm.Show();
             this.Close();
-        }
-
-        private void dataListadoClientes_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dataListadoClientes.SelectedCells.Count > 0)
-            {
-                int selectedrowindex = dataListadoClientes.SelectedCells[0].RowIndex;
-                DataGridViewRow selectedRow = dataListadoClientes.Rows[selectedrowindex];
-                this.IdCliente = Convert.ToInt32(selectedRow.Cells["IdCliente"].Value);
-                Console.WriteLine("El id IdCliente es " + this.IdCliente);
-            }
         }
 
         private void botonEditarListado_Click_1(object sender, EventArgs e)
@@ -144,6 +118,36 @@ namespace movi_escritorio.Presentacion.Clientes
         private void ClientesPrincipal_Load(object sender, EventArgs e)
         {
             MostrarClientes();
+        }
+
+        private void btnFicha_Click(object sender, EventArgs e)
+        {
+            Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, false);
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
+
+
+        //Mostrar Mensaje de Confirmación
+        private void MensajeOk(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Movi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        //Mostrar Mensaje de Error
+        private void MensajeError(string mensaje)
+        {
+            MessageBox.Show(mensaje, "Movi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void dataListadoClientes_SelectionChanged_1(object sender, EventArgs e)
+        {
+            if (dataListadoClientes.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataListadoClientes.SelectedCells[0].RowIndex;
+                DataGridViewRow selectedRow = dataListadoClientes.Rows[selectedrowindex];
+                this.IdCliente = Convert.ToInt32(selectedRow.Cells["IdPersona"].Value);
+                Console.WriteLine("El id IdCliente es " + this.IdCliente);
+            }
         }
     }
 }

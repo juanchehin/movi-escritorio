@@ -34,6 +34,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.rtbObjetivo = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.cbSexo = new System.Windows.Forms.ComboBox();
@@ -52,10 +62,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,15 +100,22 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(546, 520);
+            this.btnCancelar.Location = new System.Drawing.Point(546, 649);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click_1);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.rtbObjetivo);
+            this.groupBox1.Controls.Add(this.label13);
+            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.label10);
@@ -127,10 +140,92 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.groupBox1.Location = new System.Drawing.Point(34, 103);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(587, 411);
+            this.groupBox1.Size = new System.Drawing.Size(648, 540);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Clientes";
+            this.groupBox1.Text = "Cliente";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(109, 314);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 41;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(49, 314);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(47, 13);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "Horario :";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(400, 259);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 38;
+            // 
+            // rtbObjetivo
+            // 
+            this.rtbObjetivo.Location = new System.Drawing.Point(109, 362);
+            this.rtbObjetivo.Name = "rtbObjetivo";
+            this.rtbObjetivo.Size = new System.Drawing.Size(279, 54);
+            this.rtbObjetivo.TabIndex = 36;
+            this.rtbObjetivo.Text = "";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(6, 362);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(55, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Objetivo : ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(294, 259);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(99, 13);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Fecha Nacimiento :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(49, 256);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(44, 13);
+            this.label11.TabIndex = 33;
+            this.label11.Text = "Correo :";
+            // 
+            // txtCorreo
+            // 
+            this.txtCorreo.Location = new System.Drawing.Point(109, 253);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(121, 20);
+            this.txtCorreo.TabIndex = 32;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(294, 203);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(30, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Nro :";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(405, 200);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 30;
             // 
             // label9
             // 
@@ -145,7 +240,7 @@
             // 
             this.txtCalle.Location = new System.Drawing.Point(109, 196);
             this.txtCalle.Name = "txtCalle";
-            this.txtCalle.Size = new System.Drawing.Size(104, 20);
+            this.txtCalle.Size = new System.Drawing.Size(121, 20);
             this.txtCalle.TabIndex = 7;
             // 
             // cbSexo
@@ -166,7 +261,7 @@
             // 
             // rtbObservaciones
             // 
-            this.rtbObservaciones.Location = new System.Drawing.Point(109, 309);
+            this.rtbObservaciones.Location = new System.Drawing.Point(109, 438);
             this.rtbObservaciones.Name = "rtbObservaciones";
             this.rtbObservaciones.Size = new System.Drawing.Size(279, 96);
             this.rtbObservaciones.TabIndex = 8;
@@ -175,7 +270,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 309);
+            this.label8.Location = new System.Drawing.Point(6, 438);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 13);
             this.label8.TabIndex = 24;
@@ -219,7 +314,7 @@
             // 
             this.txtApellidos.Location = new System.Drawing.Point(109, 36);
             this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(107, 20);
+            this.txtApellidos.Size = new System.Drawing.Size(121, 20);
             this.txtApellidos.TabIndex = 1;
             // 
             // label2
@@ -235,7 +330,7 @@
             // 
             this.txtDocumento.Location = new System.Drawing.Point(109, 87);
             this.txtDocumento.Name = "txtDocumento";
-            this.txtDocumento.Size = new System.Drawing.Size(107, 20);
+            this.txtDocumento.Size = new System.Drawing.Size(121, 20);
             this.txtDocumento.TabIndex = 3;
             // 
             // label5
@@ -251,7 +346,7 @@
             // 
             this.txtTelefono.Location = new System.Drawing.Point(109, 143);
             this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(104, 20);
+            this.txtTelefono.Size = new System.Drawing.Size(121, 20);
             this.txtTelefono.TabIndex = 5;
             // 
             // label3
@@ -265,7 +360,7 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(439, 520);
+            this.btnGuardar.Location = new System.Drawing.Point(439, 649);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 23);
             this.btnGuardar.TabIndex = 18;
@@ -283,43 +378,11 @@
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(294, 203);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Nro :";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(405, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(104, 20);
-            this.textBox1.TabIndex = 30;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(49, 256);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 13);
-            this.label11.TabIndex = 33;
-            this.label11.Text = "Correo :";
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(109, 253);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(104, 20);
-            this.txtCorreo.TabIndex = 32;
-            // 
             // NuevoEditarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(704, 576);
+            this.ClientSize = new System.Drawing.Size(710, 684);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblEditarNuevo);
             this.Controls.Add(this.label6);
@@ -330,6 +393,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NuevoEditarCliente";
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.NuevoEditarCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -368,5 +432,11 @@
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox rtbObjetivo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label14;
     }
 }
