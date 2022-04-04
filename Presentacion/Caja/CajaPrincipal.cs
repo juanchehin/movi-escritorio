@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace movi_escritorio.Presentacion
+namespace movi_escritorio.Presentacion.Caja
 {
-    public partial class Personal : Form
+    public partial class CajaPrincipal : Form
     {
-        public Personal()
+        public CajaPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void dataListadoEmpleados_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

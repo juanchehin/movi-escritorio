@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace movi_escritorio.Presentacion
+namespace movi_escritorio.Presentacion.Personal
 {
-    public partial class Caja : Form
+    public partial class PersonalPrincipal : Form
     {
-        public Caja()
+        public PersonalPrincipal()
         {
             InitializeComponent();
         }

@@ -29,10 +29,10 @@ namespace movi_escritorio.Logica
             return Obj.Insertar(Obj);
         }
 
-        public DataTable MostrarClientes(string Apellidos, string Nombres, int IdPlan)
+        public DataTable BuscarClientes(string Apellidos, string Nombres, int IdPlan)
         {
             DataTable tabla = new DataTable();
-            tabla = objetoCD.MostrarClientes();
+            tabla = objetoCD.BuscarClientes(Apellidos,Nombres,IdPlan);
             return tabla;
         }
         public static string Eliminar(int IdCliente)

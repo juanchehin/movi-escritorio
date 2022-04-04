@@ -103,11 +103,11 @@
     <Compile Include="Presentacion\Asistencias\Asistencias.Designer.cs">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Caja\Caja.cs">
+    <Compile Include="Presentacion\Caja\CajaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Caja\Caja.Designer.cs">
-      <DependentUpon>Caja.cs</DependentUpon>
+    <Compile Include="Presentacion\Caja\CajaPrincipal.Designer.cs">
+      <DependentUpon>CajaPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Caja\NuevoEditarMovimiento.cs">
       <SubType>Form</SubType>
@@ -115,11 +115,11 @@
     <Compile Include="Presentacion\Caja\NuevoEditarMovimiento.Designer.cs">
       <DependentUpon>NuevoEditarMovimiento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Clientes\Clientes1.cs">
+    <Compile Include="Presentacion\Clientes\ClientesPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Clientes\Clientes1.Designer.cs">
-      <DependentUpon>Clientes1.cs</DependentUpon>
+    <Compile Include="Presentacion\Clientes\ClientesPrincipal.Designer.cs">
+      <DependentUpon>ClientesPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Clientes\NuevoEditarCliente.cs">
       <SubType>Form</SubType>
@@ -151,11 +151,11 @@
     <Compile Include="Presentacion\Personal\NuevoEditarPersonal.Designer.cs">
       <DependentUpon>NuevoEditarPersonal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Personal\Personal.cs">
+    <Compile Include="Presentacion\Personal\PersonalPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Personal\Personal.Designer.cs">
-      <DependentUpon>Personal.cs</DependentUpon>
+    <Compile Include="Presentacion\Personal\PersonalPrincipal.Designer.cs">
+      <DependentUpon>PersonalPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\Planes\NuevoEditarPlan.cs">
       <SubType>Form</SubType>
@@ -163,22 +163,22 @@
     <Compile Include="Presentacion\Planes\NuevoEditarPlan.Designer.cs">
       <DependentUpon>NuevoEditarPlan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\Planes\Planes.cs">
+    <Compile Include="Presentacion\Planes\PlanesPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\Planes\Planes.Designer.cs">
-      <DependentUpon>Planes.cs</DependentUpon>
+    <Compile Include="Presentacion\Planes\PlanesPrincipal.Designer.cs">
+      <DependentUpon>PlanesPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\Asistencias\Asistencias.resx">
       <DependentUpon>Asistencias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Caja\Caja.resx">
-      <DependentUpon>Caja.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Caja\CajaPrincipal.resx">
+      <DependentUpon>CajaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Clientes\Clientes1.resx">
-      <DependentUpon>Clientes1.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Clientes\ClientesPrincipal.resx">
+      <DependentUpon>ClientesPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Clientes\NuevoEditarCliente.resx">
       <DependentUpon>NuevoEditarCliente.cs</DependentUpon>
@@ -195,14 +195,14 @@
     <EmbeddedResource Include="Presentacion\Personal\NuevoEditarPersonal.resx">
       <DependentUpon>NuevoEditarPersonal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Personal\Personal.resx">
-      <DependentUpon>Personal.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Personal\PersonalPrincipal.resx">
+      <DependentUpon>PersonalPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Planes\NuevoEditarPlan.resx">
       <DependentUpon>NuevoEditarPlan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\Planes\Planes.resx">
-      <DependentUpon>Planes.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\Planes\PlanesPrincipal.resx">
+      <DependentUpon>PlanesPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

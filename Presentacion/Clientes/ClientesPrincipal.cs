@@ -4,24 +4,21 @@ using System.Windows.Forms;
 
 namespace movi_escritorio.Presentacion.Clientes
 {
-    public partial class Clientes1 : Form
+    public partial class ClientesPrincipal : Form
     {
-        public Clientes1()
+        public ClientesPrincipal()
         {
             InitializeComponent();
+            MostrarClientes();
         }
 
         CL_Clientes objetoCL = new CL_Clientes();
 
         private int IdCliente;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            MostrarClientes();
-        }
         public void MostrarClientes()
         {
-            dataListadoClientes.DataSource = objetoCL.MostrarClientes(this.txtApellidos.Text, this.txtNombres.Text,0);
+            dataListadoClientes.DataSource = objetoCL.BuscarClientes(this.txtApellidos.Text, this.txtNombres.Text, 0);
             dataListadoClientes.Columns[0].Visible = false;
             lblTotalClientes.Text = "Total de Registros: " + Convert.ToString(dataListadoClientes.Rows.Count);
             // this.banderaFormularioHijo = false;
@@ -80,9 +77,9 @@ namespace movi_escritorio.Presentacion.Clientes
         private void btnNuevoCliente_Click(object sender, EventArgs e)
         {
             Console.WriteLine("this.IdCliente en click nuevo es  : " + this.IdCliente);
-            Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, true);
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
+            //Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, true);
+            //frm.MdiParent = this.MdiParent;
+            //frm.Show();
             this.Close();
         }
 
@@ -99,9 +96,9 @@ namespace movi_escritorio.Presentacion.Clientes
 
         private void botonEditarListado_Click_1(object sender, EventArgs e)
         {
-            Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, false);
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
+            //Presentacion.Clientes.NuevoEditarCliente frm = new NuevoEditarCliente(this.IdCliente, false);
+            //frm.MdiParent = this.MdiParent;
+            //frm.Show();
             this.Close();
         }
 
@@ -144,5 +141,9 @@ namespace movi_escritorio.Presentacion.Clientes
             this.MostrarClientes();
         }
 
+        private void ClientesPrincipal_Load(object sender, EventArgs e)
+        {
+            MostrarClientes();
+        }
     }
 }

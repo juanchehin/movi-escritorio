@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace movi_escritorio.Presentacion
+namespace movi_escritorio.Presentacion.Planes
 {
-    public partial class Planes : Form
+    public partial class PlanesPrincipal : Form
     {
-        public Planes()
+        public PlanesPrincipal()
         {
             InitializeComponent();
         }

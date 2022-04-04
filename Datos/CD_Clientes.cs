@@ -97,6 +97,7 @@ namespace movi_escritorio.Datos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandType = CommandType.StoredProcedure;
             comando.CommandText = "bsp_buscar_cliente_plan_estado";
+            comando.Parameters.Clear();            
 
             MySqlParameter pApellidos = new MySqlParameter();
             pApellidos.ParameterName = "@pApellidos";

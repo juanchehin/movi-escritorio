@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using movi_escritorio.Presentacion.Caja;
+using movi_escritorio.Presentacion.Clientes;
+using movi_escritorio.Presentacion.Personal;
+using movi_escritorio.Presentacion.Planes;
 
 namespace movi_escritorio.Presentacion
 {
@@ -25,28 +22,28 @@ namespace movi_escritorio.Presentacion
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            Clientes frm = new Clientes();
+            ClientesPrincipal frm = new ClientesPrincipal();
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
         private void btnPlanes_Click(object sender, EventArgs e)
         {
-            Planes frm = new Planes();
+            PlanesPrincipal frm = new PlanesPrincipal();
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
         private void btnCaja_Click(object sender, EventArgs e)
         {
-            Caja frm = new Caja();
+            CajaPrincipal frm = new CajaPrincipal();
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
 
         private void btnPersonal_Click(object sender, EventArgs e)
         {
-            Personal frm = new Personal();
+            PersonalPrincipal frm = new PersonalPrincipal();
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
