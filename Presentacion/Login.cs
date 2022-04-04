@@ -44,5 +44,13 @@ namespace movi_escritorio.Presentacion
 
             }
         }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                this.btnIniciarSesion_Click(sender, e);
+            }
+        }
     }
 }
